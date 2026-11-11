@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deliverability & Subject Line Analyzer</title>
+    <title>Deliverability & Subject Line Analyzer - Today's Live Feed</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -63,7 +63,7 @@
                     </div>
                     <div>
                         <h1 class="font-bold text-white text-base leading-tight tracking-tight">Deliverability</h1>
-                        <p class="text-[11px] text-slate-400 font-medium">Subject & Folder Monitor</p>
+                        <p class="text-[11px] text-slate-400 font-medium">Today's Subject Monitor</p>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                 <nav class="space-y-1">
                     <a href="#" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg bg-indigo-600/10 text-indigo-400 font-semibold text-sm border border-indigo-500/20">
                         <i class="fa-solid fa-chart-line w-4 text-center"></i>
-                        <span>Subject Line Scanner</span>
+                        <span>Today's Scanner</span>
                     </a>
                     <a href="#common-section" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 font-medium text-sm transition-colors">
                         <i class="fa-solid fa-bullseye w-4 text-center"></i>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="flex items-center justify-between text-slate-300">
                     <span class="text-slate-400">Master Nodes</span>
-                    <span id="sidebar-accounts-count" class="font-mono bg-slate-700 px-2 py-0.5 rounded text-white font-semibold">12 Active</span>
+                    <span id="sidebar-accounts-count" class="font-mono bg-slate-700 px-2 py-0.5 rounded text-white font-semibold">8 Active</span>
                 </div>
             </div>
         </aside>
@@ -101,8 +101,8 @@
             <header class="mb-6 sm:mb-8 border-b border-slate-200 pb-5 sm:pb-6">
                 <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                     <div>
-                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">Subject Line & Delivery Monitor</h2>
-                        <p class="text-xs sm:text-sm text-slate-500 mt-1">Scan last 3 subjects across <span id="header-accounts-count" class="font-semibold text-slate-700">12</span> accounts with precise delivery timestamps in seconds.</p>
+                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">Today's Subject Line & Delivery Monitor</h2>
+                        <p class="text-xs sm:text-sm text-slate-500 mt-1">Isolating and auditing all subject lines received strictly on the <span class="font-semibold text-slate-700">current date</span> across <span id="header-accounts-count" class="font-semibold text-slate-700">8</span> accounts.</p>
                     </div>
                     <div id="active-mode-badge" class="self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-slate-500"></span> Idle / Ready
@@ -132,13 +132,13 @@
                             <!-- Check Inbox Button -->
                             <button id="btn-check-inbox" type="button" class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold rounded-xl text-xs sm:text-sm transition-all shadow-sm flex items-center justify-center gap-2.5">
                                 <i class="fa-solid fa-inbox text-sm sm:text-base"></i>
-                                <span>Check Inbox</span>
+                                <span>Check Today's Inbox</span>
                             </button>
 
                             <!-- Check Spam Button -->
                             <button id="btn-check-spam" type="button" class="w-full py-3 px-4 bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white font-semibold rounded-xl text-xs sm:text-sm transition-all shadow-sm flex items-center justify-center gap-2.5">
                                 <i class="fa-solid fa-triangle-exclamation text-sm sm:text-base"></i>
-                                <span>Check Spam</span>
+                                <span>Check Today's Spam</span>
                             </button>
 
                             <!-- Clear Workspace Button -->
@@ -158,7 +158,7 @@
                         <!-- Top Identified Subject Input & Copy -->
                         <div class="flex-1">
                             <label class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">
-                                Primary Identified Subject Line
+                                Primary Identified Subject Line (Today)
                             </label>
                             <div class="flex gap-2">
                                 <input id="common-subject-input" readonly
@@ -187,7 +187,7 @@
                     <div id="inbox-subjects-summary-container" class="hidden border-t border-slate-100 pt-5">
                         <div class="flex items-center justify-between mb-3">
                             <h4 class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-2">
-                                <i class="fa-solid fa-inbox text-indigo-600"></i> Inbox Subject Lines & Match Distribution
+                                <i class="fa-solid fa-inbox text-indigo-600"></i> Today's Inbox Subjects & Distribution
                             </h4>
                             <span id="inbox-subjects-count" class="text-[11px] font-mono text-slate-400 font-medium">0 unique subjects</span>
                         </div>
@@ -205,8 +205,8 @@
                                 <i class="fa-solid fa-eye text-sm"></i>
                             </div>
                             <div>
-                                <h4 id="preview-trigger-title" class="text-sm font-bold text-slate-800">Email Found in Target Account</h4>
-                                <p id="preview-trigger-desc" class="text-xs text-slate-500">View safe sandboxed preview pulled from node <strong class="text-slate-700 font-semibold">musk9090</strong>.</p>
+                                <h4 id="preview-trigger-title" class="text-sm font-bold text-slate-800">Email Found in Account Node</h4>
+                                <p id="preview-trigger-desc" class="text-xs text-slate-500">View safe sandboxed preview pulled from node payload.</p>
                             </div>
                         </div>
                         <button id="show-preview-btn" type="button" class="w-full sm:w-auto px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm flex items-center justify-center gap-2">
@@ -239,7 +239,7 @@
                             <i class="fa-solid fa-inbox text-xl sm:text-2xl"></i>
                         </div>
                         <h4 class="text-xs sm:text-sm font-bold text-slate-700 mb-1">No Active Scan Data</h4>
-                        <p class="text-xs text-slate-400 max-w-sm">Enter target domains above and click <strong>Check Inbox</strong> or <strong>Check Spam</strong> to inspect subject lines and delivery times.</p>
+                        <p class="text-xs text-slate-400 max-w-sm">Enter target domains above and click <strong>Check Today's Inbox</strong> or <strong>Check Today's Spam</strong> to inspect subject lines and delivery times.</p>
                     </div>
 
                     <!-- Mobile-Optimized Table Container -->
@@ -249,7 +249,7 @@
                                 <tr class="bg-slate-50/80 border-b border-slate-200 text-slate-500 text-[11px] uppercase tracking-wider font-bold">
                                     <th class="px-6 py-3.5">Account Node</th>
                                     <th class="px-6 py-3.5">Target Domain</th>
-                                    <th class="px-6 py-3.5">Last 3 Subject Lines & Delivery Times</th>
+                                    <th class="px-6 py-3.5">Today's Subject Lines & Delivery Times</th>
                                     <th class="px-6 py-3.5 text-right">Status</th>
                                 </tr>
                             </thead>
@@ -280,12 +280,12 @@
             <div class="px-4 sm:px-6 py-3 bg-slate-50/50 border-b border-slate-100 flex flex-wrap gap-2.5 sm:gap-4 items-center text-[11px] sm:text-xs text-slate-600 font-medium">
                 <div>
                     <span class="text-slate-400">Account:</span>
-                    <span id="modal-account" class="font-bold text-slate-800">musk9090</span>
+                    <span id="modal-account" class="font-bold text-slate-800">Node</span>
                 </div>
                 <div class="w-1 h-1 rounded-full bg-slate-300 hidden sm:block"></div>
                 <div>
                     <span class="text-slate-400">Timestamp:</span>
-                    <span id="modal-time" class="font-mono text-slate-800">Jun 8 @ 14:30:10</span>
+                    <span id="modal-time" class="font-mono text-slate-800">Nov 11 @ 14:30:10</span>
                 </div>
                 <div class="w-1 h-1 rounded-full bg-slate-300 hidden sm:block"></div>
                 <div>
@@ -324,20 +324,16 @@
                 { name: "asharyaliveseedacc", type: "Opener", token: "1//0guqANvb_X5K3CgYIARAAGBASNwF-L9IrqODXDbSdAtPz7GznJrXl0HXkUbcKQ9yqWwda563DfGtAbc8MlFkDZuja-SzHMG7WkXk" },
                 { name: "liveseedsformm", type: "Opener", token: "1//0gj4AZbhLjWK0CgYIARAAGBASNwF-L9IrKfhgpAfv-20pn5NC72ByHJS-b17sGCNrkV3vTDkiVGV98aGbwn32IKXhx97d0X-KHeg" },
                 { name: "arcsann6767", type: "Opener", token: "1//0gbQkQjqB6dmFCgYIARAAGBASNwF-L9IroUxKSF0oSj2t_9L9l7Bk7inNEepzhDA-DLrpVngouFHoyGl__nEp3OD-2SlbxAofEdM" },
-               { name: "kartikag8429", type: "Opener", token: "1//0g0j86Rcxi3QrCgYIARAAGBASNwF-L9Ir-y6PjI7Qr4d5iBkYbc-Tx_ZBQqBUGvnNS0O35qva682RqRzrEP0oQ93rpofm2PzFS6k" },
+                { name: "kartikag8429", type: "Opener", token: "1//0g0j86Rcxi3QrCgYIARAAGBASNwF-L9Ir-y6PjI7Qr4d5iBkYbc-Tx_ZBQqBUGvnNS0O35qva682RqRzrEP0oQ93rpofm2PzFS6k" },
                 { name: "ashwinaryaop", type: "Non-Opener", token: "1//0gVEsWZHhysDiCgYIARAAGBASNwF-L9Ir1VA8Wq2OqrP4NB6DBnNAM64bLqlW05jn1p9BXNcgLg6On-w_wa8AS4nVi3P6kaWAYMI" },
-           
                 { name: "ashwin.mavericksmedia", token: "1//0ghFlwp963PsqCgYIARAAGBASNwF-L9IrfCKuOqQg8xqQz3BAvXnxnA5wVuHEvUB89gbDgcLr3eo7p13S61n3lPsvj47lWN5Hm7E" },
-              
-               
-                  { 
+                { 
                     name: "ashwinaryanono", 
                     type: "Non-Opener", 
                     token: "1//0g6qv3E3pprRyCgYIARAAGBASNwF-L9Ir2_X7lmQnuoPgkTHwSKCYGk3Lvy-rKCUXmBhOQL2uG6B-YojzqSmFiCVyJp0vNBfoq6c",
                     clientId: "707901165841-938emg3s0i65g4j1nebqqf33kr65rblp.apps.googleusercontent.com",
                     clientSecret: "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"
                 }
-                
             ]
         };
 
@@ -443,19 +439,27 @@
 
         async function fetchSubjects(accessToken, domain, mode) {
             try {
-                const folderQuery = mode === 'inbox' ? 'in:inbox' : 'in:spam';
-                const q = encodeURIComponent(`${domain} ${folderQuery}`);
+                const now = new Date();
                 
-                const listRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages?q=${q}&maxResults=3`, {
+                // Construct after:YYYY/MM/DD using the start of today
+                const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                const queryDateStr = `${startOfToday.getFullYear()}/${String(startOfToday.getMonth() + 1).padStart(2, '0')}/${String(startOfToday.getDate()).padStart(2, '0')}`;
+                
+                const folderQuery = mode === 'inbox' ? 'in:inbox' : 'in:spam';
+                const q = encodeURIComponent(`${domain} ${folderQuery} after:${queryDateStr}`);
+                
+                // Fetch up to 15 messages to capture all of today's emails
+                const listRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages?q=${q}&maxResults=15`, {
                     headers: { Authorization: `Bearer ${accessToken}` }
                 });
                 const listData = await listRes.json();
 
                 if (!listData.messages || listData.messages.length === 0) return [];
 
-                const now = Date.now();
+                const currentTimeMs = now.getTime();
+                const todayDateString = now.toDateString();
 
-                return await Promise.all(listData.messages.map(async (m) => {
+                const fetchedMessages = await Promise.all(listData.messages.map(async (m) => {
                     const msgRes = await fetch(`https://gmail.googleapis.com/gmail/v1/users/me/messages/${m.id}`, {
                         headers: { Authorization: `Bearer ${accessToken}` }
                     });
@@ -468,13 +472,14 @@
                     const dateObj = new Date(dateRaw);
                     const timeValid = !isNaN(dateObj.getTime());
                     
-                    let secondsAgo = 0;
-                    if (timeValid) {
-                        secondsAgo = Math.max(0, Math.floor((now - dateObj.getTime()) / 1000));
+                    // Strict date validation: Match today's calendar date
+                    if (!timeValid || dateObj.toDateString() !== todayDateString) {
+                        return null;
                     }
 
-                    const dateStr = !timeValid ? "N/A" : dateObj.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-                    const timeStr = !timeValid ? "N/A" : dateObj.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+                    const secondsAgo = Math.max(0, Math.floor((currentTimeMs - dateObj.getTime()) / 1000));
+                    const dateStr = dateObj.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+                    const timeStr = dateObj.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
 
                     const snippet = msgData.snippet || "";
                     let parsedBody = "";
@@ -499,6 +504,9 @@
                         body: parsedBody || snippet 
                     };
                 }));
+
+                // Drop items from previous dates
+                return fetchedMessages.filter(item => item !== null);
             } catch (e) { 
                 return null; 
             }
@@ -510,43 +518,36 @@
             
             const accName = accConfig.name;
             const isOpener = accConfig.type === "Opener";
-            const isMuskan = (accName === 'muskansharma90' || accName === 'musk9090');
 
             const typeBadgeHtml = isOpener 
                 ? `<span class="inline-flex items-center gap-1 text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-200 px-1.5 py-0.5 rounded font-semibold mt-0.5"><i class="fa-solid fa-envelope-open text-[8px]"></i> Opener</span>`
                 : `<span class="inline-flex items-center gap-1 text-[10px] bg-slate-100 text-slate-600 border border-slate-200 px-1.5 py-0.5 rounded font-semibold mt-0.5"><i class="fa-solid fa-lock text-[8px]"></i> Non-Opener</span>`;
 
-            const accountLabel = isMuskan 
-                ? `<div class="flex flex-col">
-                    <div class="flex items-center gap-2 font-bold text-slate-900">
-                      <span class="w-2 h-2 rounded-full bg-indigo-600"></span>${accName}
-                      <span class="text-[10px] bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded font-mono">TARGET NODE</span>
-                    </div>
-                    <div class="mt-0.5">${typeBadgeHtml}</div>
-                   </div>` 
-                : `<div class="flex flex-col">
+            const accountLabel = `
+                <div class="flex flex-col">
                     <div class="font-semibold text-slate-800">${accName}</div>
                     <div class="mt-0.5">${typeBadgeHtml}</div>
-                   </div>`;
+                </div>
+            `;
 
             const hasData = subjects && subjects.length > 0;
             const statusHtml = hasData 
                 ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> MATCHED (${subjects.length})
+                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> TODAY (${subjects.length})
                    </span>`
                 : subjects === null 
                 ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-50 text-rose-700 border border-rose-200">
                      AUTH ERROR
                    </span>`
                 : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-100 text-slate-500 border border-slate-200">
-                     NO MAIL
+                     NO MAIL TODAY
                    </span>`;
 
             let subjectsHtml = '';
             if (subjects === null) {
                 subjectsHtml = `<div class="text-rose-600 text-xs font-medium">Authentication token expired for account: ${accName}</div>`;
             } else if (subjects.length === 0) {
-                subjectsHtml = `<div class="text-slate-400 text-xs italic">No messages found matching mode [${mode.toUpperCase()}] for target domain</div>`;
+                subjectsHtml = `<div class="text-slate-400 text-xs italic">No messages received today in [${mode.toUpperCase()}] for target domain</div>`;
             } else {
                 subjectsHtml = subjects.map((s, i) => {
                     const isInboxMode = s.landing === 'INBOX';
@@ -618,7 +619,7 @@
             if (results.length === 0) {
                 dom.percent.textContent = "0%";
                 dom.matchBar.style.width = "0%";
-                dom.commonInput.value = `No ${mode.toUpperCase()} messages retrieved from targets.`;
+                dom.commonInput.value = `No ${mode.toUpperCase()} messages retrieved from today.`;
                 dom.previewTrigger.classList.add('hidden');
                 dom.inboxSummaryContainer.classList.add('hidden');
                 return;
@@ -654,7 +655,7 @@
             if (topCount > 0) {
                 dom.commonInput.value = topSubject;
             } else {
-                dom.commonInput.value = `No common subjects detected in ${mode.toUpperCase()}.`;
+                dom.commonInput.value = `No common subjects detected in ${mode.toUpperCase()} today.`;
             }
 
             const inboxAccountMaps = results.reduce((acc, curr) => {
@@ -681,7 +682,7 @@
 
             if (sortedInboxSubjects.length > 0) {
                 dom.inboxSummaryContainer.classList.remove('hidden');
-                dom.inboxSubjectsCount.textContent = `${sortedInboxSubjects.length} Inbox subject${sortedInboxSubjects.length > 1 ? 's' : ''}`;
+                dom.inboxSubjectsCount.textContent = `${sortedInboxSubjects.length} Today's Inbox subject${sortedInboxSubjects.length > 1 ? 's' : ''}`;
                 
                 dom.inboxSubjectsList.innerHTML = sortedInboxSubjects.map((item, index) => {
                     return `
@@ -701,13 +702,11 @@
                 dom.inboxSummaryContainer.classList.add('hidden');
             }
 
-            const muskanResult = results.find(item => item.accName === "muskansharma90" || item.accName === "musk9090");
-            const hasMuskanMails = muskanResult && muskanResult.subjects && muskanResult.subjects.length > 0;
-
-            if (hasMuskanMails) {
+            const previewCandidate = results.find(item => item.subjects && item.subjects.length > 0);
+            if (previewCandidate) {
                 dom.previewTrigger.classList.remove('hidden');
-                dom.previewTriggerTitle.textContent = `Mail Detected in Muskan's Account (${mode.toUpperCase()})`;
-                dom.previewTriggerDesc.innerHTML = `Active ${mode.toUpperCase()} payload verified. Click button to inspect HTML structure safely.`;
+                dom.previewTriggerTitle.textContent = `Today's Mail Detected (${mode.toUpperCase()})`;
+                dom.previewTriggerDesc.innerHTML = `Active payload verified on node <strong class="text-slate-700 font-semibold">${previewCandidate.accName}</strong>.`;
             } else {
                 dom.previewTrigger.classList.add('hidden');
             }
@@ -755,7 +754,7 @@
 
             calculateCommonality(lastScanResults, mode);
             setScanUIState(false, mode);
-            dom.feedStatus.textContent = `Completed scan in [${mode.toUpperCase()}] mode at ${new Date().toLocaleTimeString()}`;
+            dom.feedStatus.textContent = `Completed scan for today's mail in [${mode.toUpperCase()}] mode at ${new Date().toLocaleTimeString()}`;
         }
 
         function setScanUIState(isScanning, mode) {
@@ -765,12 +764,12 @@
             if (isScanning) {
                 dom.progress.classList.remove('hidden');
                 dom.modeBadge.className = "self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold flex items-center gap-2 animate-pulse";
-                dom.modeBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-indigo-600"></span> Scanning [${mode.toUpperCase()}]...`;
+                dom.modeBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-indigo-600"></span> Scanning Today's [${mode.toUpperCase()}]...`;
             } else {
                 dom.progress.classList.add('hidden');
                 const badgeColor = mode === 'inbox' ? 'bg-indigo-50 text-indigo-700' : 'bg-amber-50 text-amber-800';
                 dom.modeBadge.className = `self-start sm:self-auto px-3.5 py-1.5 rounded-full ${badgeColor} border border-slate-200 text-xs font-bold flex items-center gap-2`;
-                dom.modeBadge.innerHTML = `<span class="w-2 h-2 rounded-full ${mode === 'inbox' ? 'bg-indigo-600' : 'bg-amber-600'}"></span> Active Mode: ${mode.toUpperCase()}`;
+                dom.modeBadge.innerHTML = `<span class="w-2 h-2 rounded-full ${mode === 'inbox' ? 'bg-indigo-600' : 'bg-amber-600'}"></span> Active Mode: ${mode.toUpperCase()} (Today)`;
             }
         }
 
@@ -810,19 +809,19 @@
         });
 
         dom.showPreviewBtn.addEventListener('click', () => {
-            const muskanResult = lastScanResults.find(item => item.accName === 'muskansharma90' || item.accName === 'musk9090');
-            if (!muskanResult || !muskanResult.subjects || muskanResult.subjects.length === 0) {
-                showToast("Preview Unavailable", "No subject data retrieved for node.");
+            const candidate = lastScanResults.find(item => item.subjects && item.subjects.length > 0);
+            if (!candidate) {
+                showToast("Preview Unavailable", "No subject data retrieved for today.");
                 return;
             }
 
             const activeSubject = dom.commonInput.value;
-            let targetMail = muskanResult.subjects.find(s => s.subject === activeSubject);
-            if (!targetMail) targetMail = muskanResult.subjects[0];
+            let targetMail = candidate.subjects.find(s => s.subject === activeSubject);
+            if (!targetMail) targetMail = candidate.subjects[0];
 
             if (targetMail) {
                 dom.modalSubject.textContent = targetMail.subject;
-                dom.modalAccount.textContent = `${muskanResult.accName} (Muskan Sharma)`;
+                dom.modalAccount.textContent = candidate.accName;
                 dom.modalTime.textContent = `${targetMail.dateStr} @ ${targetMail.timeStr}`;
                 dom.modalSecondsAgo.textContent = `${targetMail.secondsAgo.toLocaleString()} seconds ago`;
 
